@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.img_container {
+  flex: 1;
+  align-self: center;
+}
+
+.title_container {
+  flex: 1;
+  align-self: center;
+}

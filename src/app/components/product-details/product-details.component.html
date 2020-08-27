@@ -1,0 +1,11 @@
+<h1>{{product.asin}}</h1>
+
+<div *ngIf="product.mainImage !== ''">
+  <img src="{{product.mainImage}}" alt="{{product.asin}}" width="500" height="500">
+</div>
+
+<div *ngIf="product.mainImage === ''">
+  <img src="{{noImageLink}}" width="500" height="500">
+</div>
+
+<a href="{{product.amazonLink}}"><button>Purchase On Amazon</button></a>

@@ -1,0 +1,14 @@
+<div class="container">
+
+  <div *ngIf="product.mainImage !== ''" class="img_container">
+    <a class="clickable" (click)="routeToProduct()" ><img src="{{product.mainImage}}" alt="{{product.asin}}" width="100" height="100"></a>
+  </div>
+
+  <div *ngIf="product.mainImage === ''" class="img_container">
+    <img class="clickable" (click)="routeToProduct()" src="{{noImageLink}}" width="100" height="100">
+  </div>
+
+  <div class="title_container">
+    <a class="clickable" (click)="routeToProduct()">{{product.title}}</a>
+  </div>
+</div>
