@@ -2,7 +2,7 @@ import {Product} from './Product';
 import {Bulletpoint} from './bpoint';
 import {Image} from './Image';
 
-export const products: Product[] = [
+export const mockProducts: Product[] = [
   new Product(
     1,
     'https://www.amazon.ca/dp/B08818K84M',

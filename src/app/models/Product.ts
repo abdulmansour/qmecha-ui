@@ -17,6 +17,7 @@ export class Product {
 
 
   // tslint:disable-next-line:max-line-length
+  // used for testing with mockProducts
   constructor(id: number, amazonLink: string, brand: string, description: string, isPrime: boolean, marketplace: string, price: number, title: string, asin: string, bulletpoints: Bulletpoint[], images: Image[]) {
     this._id = id;
     this._amazonLink = amazonLink;

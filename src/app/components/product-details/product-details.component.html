@@ -1,11 +1,28 @@
-<h1>{{product.asin}}</h1>
+<div class="images_container">
+  <ul class="images_list">
+    <li class="image_list_item" *ngFor="let image of product.images">
+      <img src="{{image.imageLink}}" height="50" width="50" (mouseover)="updateMainImage(image)">
+    </li>
+  </ul>
 
-<div *ngIf="product.mainImage !== ''">
-  <img src="{{product.mainImage}}" alt="{{product.asin}}" width="500" height="500">
+  <div class="main_image_container" *ngIf="product.mainImage !== ''">
+    <img src="{{product.mainImage}}" alt="{{product.asin}}" width="500" height="500">
+  </div>
+
+  <div class="main_image_container" *ngIf="product.mainImage === ''">
+    <img src="{{noImageLink}}" width="500" height="500">
+  </div>
+  <div class="info_container">
+    <h4>{{product.title}}</h4>
+    <p>{{product.brand}}</p>
+    <p>{{product.price}}</p>
+    <ul>
+      <li *ngFor="let bulletpoint of product.bulletpoints">
+        {{bulletpoint.content}}
+      </li>
+    </ul>
+    <div>
+      <a href="{{product.amazonLink}}"><button class="btn purchase_button">Purchase On Amazon</button></a>
+    </div>
+  </div>
 </div>
-
-<div *ngIf="product.mainImage === ''">
-  <img src="{{noImageLink}}" width="500" height="500">
-</div>
-
-<a href="{{product.amazonLink}}"><button>Purchase On Amazon</button></a>

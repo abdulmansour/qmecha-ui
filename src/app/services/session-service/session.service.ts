@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Product} from '../models/Product';
+import {Product} from '../../models/Product';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +16,16 @@ export class SessionService {
   }
 
   getProduct(id: number): Product {
-    this.products.forEach(product => {
-      if (product.id === id) {
-        this.product = product;
-      }
-    });
+    if (this.products !== undefined) {
+      this.products.forEach(product => {
+        if (product.id === id) {
+          this.product = product;
+        }
+      });
+    }
+    else {
+      this.product = undefined;
+    }
     return this.product;
   }
 }

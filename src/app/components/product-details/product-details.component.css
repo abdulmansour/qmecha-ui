@@ -1,0 +1,36 @@
+.images_container {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  border: 2px #ccc solid;
+}
+
+.images_list {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  list-style: none;
+  margin-right: 10px;
+}
+
+.image_list_item {
+  border: 2px #ccc solid;
+}
+
+.main_image_container {
+  align-self: center;
+}
+
+.info_container {
+  padding: 30px;
+}
+
+.purchase_button {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: darkorange;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  align-content: center;
+}
